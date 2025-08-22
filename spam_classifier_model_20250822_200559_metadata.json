@@ -1,0 +1,23 @@
+{
+    "model_type": "Email Spam Classifier",
+    "algorithm": "LinearSVM with TF-IDF",
+    "accuracy": 0.9525899912203687,
+    "training_samples": 4556,
+    "test_samples": 1139,
+    "vocabulary_size": 722,
+    "spam_precision": 0.8571428571428571,
+    "spam_recall": 0.9635036496350365,
+    "spam_f1_score": 0.9872495446265938,
+    "false_positives": 44,
+    "false_negatives": 10,
+    "training_date": "2025-08-22T20:06:00.000087",
+    "features": {
+        "max_features": 10000,
+        "ngram_range": [
+            1,
+            2
+        ],
+        "min_df": 2,
+        "max_df": 0.95
+    }
+}
