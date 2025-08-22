@@ -1,70 +1,126 @@
 # Email Spam Classifier using NLP and Linear SVM
 
-A simple and effective **email spam classifier** built using Natural Language Processing (NLP) and a **Linear Support Vector Machine (SVM)**.  
-This project includes full data preprocessing, feature extraction using TF-IDF, model training, evaluation, visualization, and a ready-to-use prediction function.
+A simple and effective **email spam classifier** built using **Natural Language Processing (NLP)** and a **Linear Support Vector Machine (SVM)**.  
+This project implements a complete workflow: data preprocessing, feature extraction using TF-IDF, model training, evaluation, visualization, and ready-to-use prediction functions.
 
 ---
 
 ## Table of Contents
-- [Project Overview](#project-overview)
-- [Dataset](#dataset)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Evaluation](#evaluation)
-- [File Structure](#file-structure)
-- [License](#license)
+1. [Project Overview](#project-overview)
+2. [Dataset](#dataset)
+3. [Preprocessing and Cleaning](#preprocessing-and-cleaning)
+4. [Feature Extraction](#feature-extraction)
+5. [Model Training](#model-training)
+6. [Model Evaluation](#model-evaluation)
+7. [Prediction](#prediction)
+8. [Visualizations](#visualizations)
+9. [Installation](#installation)
+10. [Usage](#usage)
+11. [File Structure](#file-structure)
+12. [Best Practices](#best-practices)
+13. [License](#license)
 
 ---
 
 ## Project Overview
-This project implements a pipeline to classify emails as **HAM (legitimate)** or **SPAM (unwanted)**:
+This project classifies emails into **HAM (legitimate)** and **SPAM (unwanted)**.  
+The main steps include:
 
-1. **Text Preprocessing**
-   - Remove email addresses, URLs, phone numbers, punctuation, and stopwords  
-   - Lemmatization using spaCy  
-   - Preserve important spam-indicating words like "free", "win", "money", etc.  
+1. **Data cleaning** – remove email headers, URLs, punctuation, numbers, and stopwords. Preserve important spam words like "free", "win", "money", etc.  
+2. **Feature extraction** – convert cleaned emails into TF-IDF vectors using unigrams and bigrams.  
+3. **Classification** – train a **Linear SVM** classifier, optimized for imbalanced data using `class_weight='balanced'`.  
+4. **Evaluation** – calculate accuracy, precision, recall, F1-score, and generate confusion matrices.  
+5. **Prediction** – provide a reusable function to classify new emails.  
 
-2. **Feature Extraction**
-   - TF-IDF Vectorization with unigrams and bigrams  
-   - Vocabulary limited to top 10,000 features  
-
-3. **Model Training**
-   - Linear Support Vector Classifier (`LinearSVC`)  
-   - Handles class imbalance automatically with `class_weight='balanced'`  
-
-4. **Evaluation**
-   - Accuracy, Precision, Recall, F1-Score  
-   - Confusion matrix, error analysis, and visualization of performance metrics  
-
-5. **Prediction**
-   - Ready-to-use function `predict_email_spam()` to classify new emails  
+This pipeline ensures a **robust spam detection system** ready for real-world applications.
 
 ---
 
 ## Dataset
-The dataset contains emails labeled as **HAM (0)** or **SPAM (1)**.  
+The dataset is a collection of emails labeled as **HAM (0)** or **SPAM (1)**:
 
 - Original CSV: `Dataset/emails.csv`  
-- Cleaned CSV after removing duplicates: `Dataset/emails_cleaned.csv`  
+- Cleaned CSV (duplicates removed): `Dataset/emails_cleaned.csv`  
 
-> Note: Do not include large datasets in GitHub if sensitive; you can provide instructions for users to download it separately.
+### Dataset Statistics
+- Total emails: varies depending on dataset  
+- Class distribution: ~HAM/Spam ratio preserved via stratified splitting  
+- Email lengths and word counts are analyzed for preprocessing purposes  
 
----
-
-## Features
-- Email preprocessing using **regex** and **spaCy**  
-- Custom stopwords list with important spam words preserved  
-- TF-IDF vectorization with unigrams and bigrams  
-- Linear SVM classifier for robust spam detection  
-- Detailed evaluation and visualizations using **matplotlib** and **seaborn**  
-- Prediction function saved for reuse without retraining  
+> **Note:** Large datasets should not be pushed to GitHub. You can provide instructions to download them separately.
 
 ---
 
-## Installation
-1. Clone the repository:
+## Preprocessing and Cleaning
+Email text is preprocessed with the following steps:
 
-```bash
-git clone https://github.com/your-username/spam-classifier.git
-cd spam-classifier
+1. Remove email addresses, URLs, phone numbers, and excessive whitespace using **regular expressions**.  
+2. Tokenization and **lemmatization** using **spaCy** (`en_core_web_sm`).  
+3. Removal of **punctuation, numbers, very short tokens (<3 characters)**.  
+4. Custom stopword list:
+   - Standard English stopwords (from spaCy)  
+   - Email-specific stopwords: `'email', 'mail', 'send', 'subject', 'dear', 'hello', 'hi', 'regards'`  
+   - Spam-important words preserved: `'free', 'win', 'money', 'urgent', 'limited', 'offer', 'now', 'only', 'today'`  
+
+This ensures the **classifier focuses on relevant tokens** for spam detection.
+
+---
+
+## Feature Extraction
+- **TF-IDF Vectorization**
+  - Converts emails into numerical features  
+  - Includes **unigrams and bigrams**  
+  - Maximum of **10,000 features** for efficiency  
+  - Terms appearing in fewer than 2 documents or more than 95% of emails are ignored  
+- Stopwords are removed during tokenization, so `stop_words=None` in TF-IDF  
+
+---
+
+## Model Training
+- **Classifier:** `LinearSVC` (Linear Support Vector Machine)  
+- Handles class imbalance with `class_weight='balanced'`  
+- Maximum iterations increased to 10,000 (`max_iter=10000`) to ensure convergence  
+- Pipeline steps:
+  1. TF-IDF vectorization  
+  2. Linear SVM classification  
+
+Training split uses **stratified 80-20 split** to preserve class ratio.
+
+---
+
+## Model Evaluation
+The trained model is evaluated using:
+
+1. **Accuracy**
+2. **Precision, Recall, F1-Score** (class-wise and averaged)  
+3. **Confusion Matrix** with:
+   - True Negatives (HAM→HAM)  
+   - False Positives (HAM→SPAM) – Important emails misclassified  
+   - False Negatives (SPAM→HAM) – Spam in inbox  
+   - True Positives (SPAM→SPAM)  
+
+Example metrics:
+
+| Class  | Precision | Recall | F1-Score |
+|--------|-----------|--------|----------|
+| HAM    | 0.99      | 0.98   | 0.99     |
+| SPAM   | 0.98      | 0.99   | 0.98     |
+
+---
+
+## Prediction
+The saved model pipeline can be used to classify new emails:
+
+```python
+from saved_models.spam_classifier_model_<timestamp>_predict_function import predict_email_spam
+
+email_text = "Congratulations! You won a free iPhone. Click here now!"
+result = predict_email_spam(email_text)
+
+print(result)
+# Output:
+# {
+#   'prediction': 'SPAM',
+#   'confidence_score': 2.45,
+#   'is_spam': True
+# }
