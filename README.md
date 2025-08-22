@@ -235,9 +235,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Heshan Ranasinghe**  
 Electronic & Telecommunication Engineering Undergraduate
 
-- 🌐 GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
-- 📧 Email: hranasinghe505@gmail.com
-- 💼 LinkedIn: [Connect with me](www.linkedin.com/in/heshan-ranasinghe-988b00290)
+🌐 GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)  
+📧 Email: [hranasinghe505@gmail.com]  
+💼 LinkedIn: [www.linkedin.com/in/heshan-ranasinghe-988b00290]
 ---
 
 ## 🙏 Acknowledgments
