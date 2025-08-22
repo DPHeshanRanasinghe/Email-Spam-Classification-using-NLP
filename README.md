@@ -1,6 +1,6 @@
 # 📨 Email Spam Classifier using NLP & Linear SVM
 
-A **high-accuracy spam email classification system** using **Natural Language Processing** and **Linear Support Vector Machine**. Achieves **99%+ accuracy** in distinguishing between legitimate (HAM) and unwanted (SPAM) emails.
+A **high-accuracy spam email classification system** using **Natural Language Processing** and **Linear Support Vector Machine**. Achieves **95%+ accuracy** in distinguishing between legitimate (HAM) and unwanted (SPAM) emails.
 
 ---
 
