@@ -1,6 +1,6 @@
 # 📨 Email Spam Classifier using NLP & Linear SVM
 
-A **high-accuracy spam email classification system** using **Natural Language Processing** and **Linear Support Vector Machine**. Achieves **99%+ accuracy** in distinguishing between legitimate (HAM) and unwanted (SPAM) emails.
+A **high-accuracy spam email classification system** using **Natural Language Processing** and **Linear Support Vector Machine**. Achieves **95%+ accuracy** in distinguishing between legitimate (HAM) and unwanted (SPAM) emails.
 
 ---
 
@@ -68,7 +68,7 @@ Email-Spam-Classifier/
 ├── Dataset/
 │   └── emails.csv                    # Training dataset
 ├── notebooks/
-│   └── spam_classifier_notebook.ipynb   # Main implementation
+│   └── Email_Spam_Classification_Using_NLP.ipynb   # Main implementation
 ├── saved_models/
 │   └── spam_classifier_model.joblib     # Trained model
 ├── requirements.txt                  # Python dependencies
@@ -235,10 +235,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Heshan Ranasinghe**  
 Electronic & Telecommunication Engineering Undergraduate
 
-- 🌐 GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
-- 📧 Email: hranasinghe505@gmail.com
-- 💼 LinkedIn: [Connect with me](https://linkedin.com/in/heshan-ranasinghe)
-
+- 🌐 GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)  
+- 📧 Email: [hranasinghe505@gmail.com]  
+- 💼 LinkedIn: [www.linkedin.com/in/heshan-ranasinghe-988b00290]
 ---
 
 ## 🙏 Acknowledgments
