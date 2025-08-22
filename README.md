@@ -36,7 +36,7 @@ A **high-accuracy spam email classification system** using **Natural Language Pr
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/DPHeshanRanasinghe/Email-Spam-Classifier.git
+git clone https://github.com/DPHeshanRanasinghe/Email-Spam-Classification-using-NLP.git
 cd Email-Spam-Classifier
 ```
 
