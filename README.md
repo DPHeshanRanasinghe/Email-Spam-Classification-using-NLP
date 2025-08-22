@@ -36,7 +36,7 @@ A **high-accuracy spam email classification system** using **Natural Language Pr
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/DPHeshanRanasinghe/Email-Spam-Classifier.git
+git clone https://github.com/DPHeshanRanasinghe/Email-Spam-Classification-using-NLP.git
 cd Email-Spam-Classifier
 ```
 
@@ -68,7 +68,7 @@ Email-Spam-Classifier/
 ├── Dataset/
 │   └── emails.csv                    # Training dataset
 ├── notebooks/
-│   └── spam_classifier_notebook.ipynb   # Main implementation
+│   └── Email_Spam_Classification_Using_NLP.ipynb   # Main implementation
 ├── saved_models/
 │   └── spam_classifier_model.joblib     # Trained model
 ├── requirements.txt                  # Python dependencies
@@ -237,7 +237,7 @@ Electronic & Telecommunication Engineering Undergraduate
 
 - 🌐 GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
 - 📧 Email: hranasinghe505@gmail.com
-- 💼 LinkedIn: [Connect with me](https://linkedin.com/in/heshan-ranasinghe)
+- 💼 LinkedIn: [Connect with me](https://github.com/DPHeshanRanasinghe/Email-Spam-Classification-using-NLP)
 
 ---
 
