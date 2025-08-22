@@ -237,7 +237,7 @@ Electronic & Telecommunication Engineering Undergraduate
 
 - 🌐 GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
 - 📧 Email: hranasinghe505@gmail.com
-- 💼 LinkedIn: [Connect with me](https://github.com/DPHeshanRanasinghe/Email-Spam-Classification-using-NLP)
+- 💼 LinkedIn: [Connect with me](www.linkedin.com/in/heshan-ranasinghe-988b00290)
 
 ---
 
