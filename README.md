@@ -56,7 +56,7 @@ python -m spacy download en_core_web_sm
 
 ### 4. Run the Notebook
 ```bash
-jupyter notebook notebooks/spam_classifier_notebook.ipynb
+jupyter notebook notebooks/Email_Spam_Classification_Using_NPL.ipynb
 ```
 
 ---
