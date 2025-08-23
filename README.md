@@ -64,15 +64,13 @@ jupyter notebook notebooks/Email_Spam_Classification_Using_NPL.ipynb
 ## 📂 Project Structure
 
 ```
-Email-Spam-Classifier/
-├── Dataset/
+Email-Spam-Classification-using-NLP
+├── Dataset
 │   └── emails.csv                    # Training dataset
-├── notebooks/
+├── notebooks
 │   └── Email_Spam_Classification_Using_NLP.ipynb   # Main implementation
-├── saved_models/
+├── saved_models
 │   └── spam_classifier_model.joblib     # Trained model
-├── requirements.txt                  # Python dependencies
-├── .gitignore                       # Git ignore rules
 └── README.md                        # This file
 ```
 
