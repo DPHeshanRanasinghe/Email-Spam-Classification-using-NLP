@@ -1,6 +1,7 @@
+
 import joblib
 
-def predict_email_spam(email_text, model_path="spam_classifier_model_20250822_200559.joblib"):
+def predict_email_spam(email_text, model_path="spam_classifier_model_20251203_062849.joblib"):
     """
     Predict if an email is spam or ham.
 
