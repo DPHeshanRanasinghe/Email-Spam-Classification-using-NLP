@@ -193,9 +193,6 @@ Contributions are welcome. Please follow these steps:
 4. Push to branch (`git push origin feature/enhancement`)
 5. Submit Pull Request
 
-## License
-
-MIT License - see [LICENSE](LICENSE) file for details.
 
 ## References
 
@@ -205,20 +202,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Author
 
-**Your Name**  
-Your Title/Department
+**Heshan Ranasinghe**  
 
-- Email: your.email@example.com
+- Email: [Email](mailto:hranasinghe505@gmail.com)
 - GitHub: [DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
 - LinkedIn: [Heshan Ranasinghe](https://www.linkedin.com/in/heshan-ranasinghe-988b00290/)
-
-## Citation
-
-```bibtex
-@software{heshan2025spamclassifier,
-  author = {Heshan Ranasinghe},
-  title = {Email Spam Classification using Natural Language Processing},
-  year = {2025},
-  url = {https://github.com/DPHeshanRanasinghe/email-spam-classifier}
-}
-```
