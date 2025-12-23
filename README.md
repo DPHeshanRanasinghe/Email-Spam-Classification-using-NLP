@@ -203,7 +203,9 @@ Contributions are welcome. Please follow these steps:
 ## Author
 
 **Heshan Ranasinghe**  
+Electronic and Telecommunication Engineering Undergraduate
 
-- Email: [Email](mailto:hranasinghe505@gmail.com)
-- GitHub: [DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
-- LinkedIn: [Heshan Ranasinghe](https://www.linkedin.com/in/heshan-ranasinghe-988b00290/)
+- Email: hranasinghe505@gmail.com
+- GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
+- LinkedIn: [Heshan Ranasinghe](https://www.linkedin.com/in/heshan-ranasinghe-988b00290)
+
